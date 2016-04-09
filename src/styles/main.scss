@@ -1,0 +1,12 @@
+.pixel {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-top: -4px;
+  &[data-filled="0"] {
+    background: #e4e4e4;
+  }
+  &[data-filled="1"] {
+    background: gray;
+  }
+}

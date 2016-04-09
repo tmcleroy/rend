@@ -1,8 +1,17 @@
-// import $ from 'cash';
-import Renderer from 'scripts/renderer';
+import 'styles/main.scss'
+import Renderer from 'scripts/renderer'
 
-// window.$ = $;
+const renderer = new Renderer({ el: document.body })
 
-const renderer = new Renderer({ el: document.body });
+const initGrid = (g) => {
+  const grid = [ ...g ]
+  grid[47] = 1
+  grid[48] = 1
+  return grid
+}
 
-renderer.init();
+renderer.render()
+
+renderer.updateGrid(initGrid);
+
+renderer.render()
