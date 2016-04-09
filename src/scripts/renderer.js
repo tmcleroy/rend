@@ -13,7 +13,7 @@ class Renderer {
     const html = `${this.grid.map((n, i) => {
       i = i + 1
       const brk = (i % this.y === 0)
-      return `<span class="pixel" data-filled="${n}"></span>${brk ? '<br>' : ''}`
+      return `<span class="pixel" data-filled="${n}"></span>${brk ? '<div class="break"></div>' : ''}`
     }).join('')}`
 
     this.el.innerHTML = html
